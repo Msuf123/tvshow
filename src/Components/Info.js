@@ -26,8 +26,8 @@ export default function Info(props){
 
              <div dangerouslySetInnerHTML={{__html: data}} className={style.para}></div>
              <div className={style.extra}>
-             <h3>Country:{props.res[props.id].show.network.country.name}</h3>
-             <h3>Schedule:{props.res[props.id].show.schedule.time}</h3>
+             
+             <h3>Schedule:{props.res[props.id].show.schedule.time?props.res[props.id].show.schedule.time:'Not available'}</h3>
              <div className={style.days}>
              {props.res[props.id].show.schedule.days.map((i)=>{
                 return(
