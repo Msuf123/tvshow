@@ -100,3 +100,41 @@
     padding:0.1px 10px;
     border-radius: 5px;
 }
+@media only screen and (max-width:790px){
+    .info{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width:790px){
+    .image{
+        margin-bottom: 10px;
+        border: 2px solid black;
+        
+    }
+}
+@media only screen and (max-width:790px){
+    .extra{
+        flex-direction: column;
+        margin-bottom: 20px;
+        
+    }
+}
+@media only screen and (max-width:504px){
+    .para{
+        font-size: 13px;
+        overflow: scroll;
+    }
+}
+@media only screen and (max-width:504px){
+    .detail h1{
+        font-size: 20px;
+        overflow: scroll;
+    }
+}
+@media only screen and (max-width:696px){
+    .extra{
+        font-size:10px;
+        overflow: scroll;
+    }
+}
