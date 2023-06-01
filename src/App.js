@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import Banner from './Components/Banner';
+import Skeleton from './Components/Skeleton';
 import './App.css';
-
+import Popup from './Components/Popup'
+import { useEffect, useState } from 'react';
+import Options from './Components/Option';
+import Info from './Components/Info';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
+  const[res,setRes]=useState('');
+  const[id,setId]=useState()
+  useEffect(()=>{
+    fetch('https://api.tvmaze.com/search/shows?q=all').then((a)=>{
+      if(a.ok){
+       // console.log('done')
+        return a.json()
+      }
+      else{
+        throw Error('An error occured')
+      }
+    }).then((res)=>{
+      //console.log(res)
+      setRes(res)
+    })
+  },[])
+
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <BrowserRouter>
+    <Routes>
+      <Route  exact path='/' element={<div className='mainn'>
+    <Banner/>
+    {res?<Options res={res} setId={setId}/>:<Skeleton/>}
+    </div>}></Route>
+      <Route  exact path='/info' element={<Info res={res} id={id}/>}>
+      <Route exact path='book' element={<Popup/>}></Route>
+      </Route>
+      
+      </Routes>
+    </BrowserRouter>
+    
+    
   );
 }
+
 
 export default App;

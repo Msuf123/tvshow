@@ -1,0 +1,22 @@
+.main{
+    margin-top: 0px;
+    display: block;
+    background-color: rgb(39, 39, 39);
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+}
+.main h1{
+     margin-left: 60px;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Crete Round', serif;
+    width: max-content;
+    background-color: transparent;
+    margin-top: 30px;
+    font-size: 40px;
+}
+.main img{
+    width: 50px;
+}

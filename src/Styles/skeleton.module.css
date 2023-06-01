@@ -1,0 +1,34 @@
+.main{
+    background-color: rgb(61, 60, 61);
+    width: min(80%,1200px);
+    margin: auto;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:min(90px,10vh) ;
+    height: min(40vh,350px);
+    border-radius: 10px;
+}
+.cards{
+    border-radius: 10px;
+    width: 30%;
+    height: 80%;
+    
+    background: linear-gradient(        
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    lightgray;
+  background-repeat: repeat-y;        
+  background-size: 50px 200px;        
+  background-position: 0 0; 
+  animation: shine 1s infinite;          
+}
+@keyframes shine {	
+    to {
+      background-position: 100% 0, /* move highlight to right */ 0 0;
+    }
+  }
