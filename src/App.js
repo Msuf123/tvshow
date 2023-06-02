@@ -42,6 +42,7 @@ function App() {
       </Route>
       
       </Routes>
+      <Popup/>
     </BrowserRouter>
     
     
