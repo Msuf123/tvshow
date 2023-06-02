@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content:space-around;
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(31, 31, 31);
     width: 30%;
-    height: min(40vh,190px);
-    margin:119vh auto;
+    height: 290px;
+    margin:19vh auto;
 }
 .header{
     width: 100%;

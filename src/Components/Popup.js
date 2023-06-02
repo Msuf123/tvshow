@@ -1,12 +1,14 @@
 import { useNavigate } from 'react-router-dom'
 import validator from 'validator'
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import style from '../Styles/popup.module.css'
 export default function (props){
     const navigate=useNavigate()
     const [emailError, setEmailError] = useState('')
     const [ans,setAns]=useState('')
-    
+    useEffect(()=>{
+      console.log('irenderd')
+    })
     const validateEmail = (e) => {
       var email = e.target.value
     
@@ -20,9 +22,10 @@ export default function (props){
     return(
         <div className={style.main}>
             <div className={style.header}>
-                <span tabIndex={2} onClick={()=>{navigate('./')}}>&#10005;</span>
+                <span tabIndex={2} onClick={()=>{navigate('../info')}}>&#10005;</span>
             </div>
-         <h1>Booked for:{}</h1>
+         <h1>Booked for: {props.res[props.id].show.name}</h1>
+         <h2>Runtime: {props.res[props.id].show.runtime?props.res[props.id].show.runtime:'?'}min</h2>
          <div className={style.inputt}>
          <span>Enter Email: </span><input type="text" id="userEmail" 
         onChange={(e) => validateEmail(e)}></input> <br />

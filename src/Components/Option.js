@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import style from '../Styles/options.module.css'
+import { useEffect } from 'react';
 
 export default function Options(props) {
    // console.log(props)

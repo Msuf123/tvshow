@@ -38,11 +38,11 @@ function App() {
     {res?<Options res={res} setId={setId}/>:<Skeleton/>}
     </div>}></Route>
       <Route  exact path='/info' element={<Info res={res} id={id}/>}>
-      <Route exact path='book' element={<Popup/>}></Route>
-      </Route>
       
+      </Route>
+      <Route exact path='/info/book' element={<Popup res={res} id={id} />}></Route>
       </Routes>
-      <Popup/>
+     
     </BrowserRouter>
     
     
